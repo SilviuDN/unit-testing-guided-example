@@ -1,13 +1,22 @@
-function sum(a, b) {
-  return;
+function sum(a = 0, b = 0) {
+  return a+b;
 }
 
-function subtract(a, b) {
-  return;
+function subtract(a = 0, b = 0) {
+  return a-b;
 }
 
-function divide(a, b) {
-  return;
+function divide(a, b = 0) {
+  if(b==0){
+    throw new Error('Divider cannot be null')
+  }
+  return a/b
+  // try{
+  //   return a/b
+  // }catch(e){
+  //   console.log(e)
+  //   throw new Error(e)
+  // }
 }
 
 function multiply(a, b) {
